@@ -1,0 +1,14 @@
+<ion-view view-title="{{title}}">
+  <ion-content>
+  	<br>
+  	<input ng-model="query" style="margin-left:10%;height:30px;width:50%; border-radius: 20px;color:#444444" placeholder=" Cerca...">
+  	<br><br>
+    <ion-list>
+      <ion-item ng-repeat="prodotto in elencoProdotti  | filter:query" href="#/app/dettaglio/{{prodotto.id}}" style="background:#f8f8f8;border-radius: 5px;padding:1%;">
+      	<img style="float: left; width:25%;margin-right:2em;border-radius: 10px;box-shadow: 5px 5px 5px #75b802;" ng-src="http://www.cartoleriapegaso.com/public/images/{{prodotto.foto}}" />
+      	<label style="font-weight:bold;font-size:1.2em;">{{prodotto.nome}}</label>
+      	<p>{{prodotto.descrizione}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

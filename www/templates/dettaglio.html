@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<ion-view view-title="{{nome}}">
+  <ion-content style="text-align:center;">
+   <h2 style="font-weight:bold;font-size:1.5em;vertical-align: middle;">{{nome}}</h2>
+   
+   	<ion-slide-box show-pager="true" style="text-align:center;">
+         <ion-slide ng-repeat="img in elencoImmagini" class='image-slide' style="width:90%;">
+         	
+             <img style="width:355px;border-radius: 20px;box-shadow: 5px 5px 5px #75b802;"  ng-src="http://www.cartoleriapegaso.com/public/images/{{ img.image }}"/>
+         	
+         </ion-slide>
+     </ion-slide-box>
+ 
+   <h2 style="font-weight:bold;font-size:1.5em;vertical-align: middle;">Descrizione</h2>
+   <p style="text-align:justify;font-size:1em;background-color:#f8f8f8;padding:2%;">{{descrizione}}</p>
+      
+   <button ng-click="clickCounter=clickCounter+1">Aggiungi prodotto</button>
+      	
+	
+ </ion-content>
+	
+</ion-view>
+
+</body>
+</html>
